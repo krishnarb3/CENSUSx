@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class CensusActivity extends AppCompatActivity implements NormalFragment.OnFragmentInteractionListener
+public class CensusActivity extends AppCompatActivity implements NormalFragment.OnFragmentInteractionListener,MarriageFragment.OnFragmentInteractionListener,OtherFragment.OnFragmentInteractionListener
 {
 
     /**
@@ -157,6 +157,8 @@ public class CensusActivity extends AppCompatActivity implements NormalFragment.
             // Return a PlaceholderFragment (defined as a static inner class below).
             if(position==0)
                 return NormalFragment.newInstance("type");
+            else if(position==1)
+                return MarriageFragment.newInstance("type");
             return PlaceholderFragment.newInstance(position + 1);
         }
 
